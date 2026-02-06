@@ -14,7 +14,7 @@ This is the **Bespoke CMS monorepo** containing **108 Laravel packages** organis
 
 | Document | Purpose |
 |----------|---------|
-| **[PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md)** | Architecture standards and compliance requirements (1200+ lines) |
+| **[PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md)** | Architecture standards and compliance requirements (~850 line index + 5 sub-documents in `docs/standards/`) |
 | **[MONOREPO_ANALYSIS.md](docs/MONOREPO_ANALYSIS.md)** | Complete analysis of all 108 packages with status |
 | **[PROJECT_EXAMPLES.md](docs/PROJECT_EXAMPLES.md)** | Typical project configurations and package combinations |
 | **[EVENT_LISTENERS.md](docs/EVENT_LISTENERS.md)** | Cross-package event communication (88 events, 31 listeners) |
@@ -271,7 +271,7 @@ protected function registerModelBindings(): void
 }
 ```
 
-See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 5 for complete examples.
+See [SERVICEPROVIDER.md](docs/standards/SERVICEPROVIDER.md) for complete examples.
 
 ### Config-Based Registration
 
@@ -369,7 +369,7 @@ See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 3 for full directo
 
 **Important:** Use `Contracts/` directory, NOT `Interfaces/`.
 
-See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 4 for contract examples.
+See [CONTRACTS.md](docs/standards/CONTRACTS.md) for contract examples.
 
 ## Required Package Functionality
 
@@ -490,7 +490,7 @@ return [
 ];
 ```
 
-See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 6 for complete config reference.
+See [SERVICEPROVIDER.md](docs/standards/SERVICEPROVIDER.md) for complete config reference.
 
 ## Testing
 
@@ -522,7 +522,7 @@ test -f routes/api.php && echo "✓ API routes" || echo "✗ Missing"
 test -d src/Interfaces && echo "⚠ Rename to Contracts/" || echo "✓ Using Contracts/"
 ```
 
-See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 9 for complete 81-point audit checklist (CRUD packages only).
+See [AUDIT_CHECKLIST.md](docs/standards/AUDIT_CHECKLIST.md) for the complete 88-point audit checklist (CRUD packages only).
 
 ## Common Pitfalls
 
@@ -534,7 +534,7 @@ See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 9 for complete 81-
 6. **API routes using IDs** - Use `{model:uuid}` pattern instead
 7. **Forcing CRUD patterns on utility packages** - Utility packages don't need API, exports, or imports
 
-See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 10 for 13 common pitfalls with solutions.
+See [COMMON_PITFALLS.md](docs/standards/COMMON_PITFALLS.md) for 22 common pitfalls with solutions.
 
 ## Claude Code Customisations
 
@@ -544,7 +544,7 @@ This repository includes custom Claude Code tooling in `.claude/`:
 
 | Skill | Usage | Description |
 |-------|-------|-------------|
-| `/audit` | `/audit <package-path>` | Audit package against PACKAGE_STANDARDS.md (81-point scoring) |
+| `/audit` | `/audit <package-path>` | Audit package against PACKAGE_STANDARDS.md (88-point scoring) |
 | `/new-crud` | `/new-crud <category/name>` | Scaffold new CRUD package from skeleton-crud template |
 | `/new-blade` | `/new-blade <component-name>` | Create new Blade component package |
 | `/add-api` | `/add-api <package-path>` | Add complete RESTful API to existing package |
