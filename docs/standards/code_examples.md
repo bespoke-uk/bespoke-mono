@@ -1,6 +1,6 @@
 # Code Examples
 
-> Extracted from [PACKAGE_STANDARDS.md](../PACKAGE_STANDARDS.md) — Section 7
+> Extracted from [package_standards.md](package_standards.md) — Section 7
 
 **Reference Implementation:** `/crm/contact`
 

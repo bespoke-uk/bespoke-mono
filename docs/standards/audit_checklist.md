@@ -1,6 +1,6 @@
 # Audit & Pre-Commit Checklists
 
-> Extracted from [PACKAGE_STANDARDS.md](../PACKAGE_STANDARDS.md) — Sections 9 and 12
+> Extracted from [package_standards.md](package_standards.md) — Sections 9 and 12
 
 ---
 

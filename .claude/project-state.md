@@ -29,11 +29,11 @@ This file tracks work-in-progress and session context for the Bespoke CMS monore
 - [x] `ensure-claude-md.sh` - Ensure new packages have CLAUDE.md
 
 #### Documentation (5) - All Complete (in `docs/`)
-- [x] `TESTING_GUIDE.md` - Standard test patterns
-- [x] `DECISIONS.md` - Architectural decision records
-- [x] `UPGRADE_CHECKLIST.md` - Step-by-step upgrade guide
-- [x] `GIT_HOOKS.md` - Git hooks setup and configuration
-- [x] `CI_CD_GUIDE.md` - CI/CD pipeline integration guide
+- [x] `docs/guides/testing_guide.md` - Standard test patterns
+- [x] `docs/standards/decisions.md` - Architectural decision records
+- [x] `docs/guides/upgrade_checklist.md` - Step-by-step upgrade guide
+- [x] `docs/guides/git_hooks.md` - Git hooks setup and configuration
+- [x] `docs/guides/ci_cd_guide.md` - CI/CD pipeline integration guide
 
 #### Memory/Context (1) - Complete
 - [x] `.claude/memory.md` - Persistent preferences and notes
@@ -67,7 +67,7 @@ This file tracks work-in-progress and session context for the Bespoke CMS monore
 Expanded Claude Code tooling from 6 skills to 11, 6 agents to 9, 3 hooks to 5, and 6 MCP tools to 9. Also created 3 new documentation files and persistent memory/project-state files.
 
 ### 2026-02-04: Tooling Expansion (Phase 2)
-Added 3 more skills (`/add-migration`, `/check-deps`, `/test-packages`), created `GIT_HOOKS.md` and `CI_CD_GUIDE.md` documentation, and added `scripts/setup-hooks.sh` for easy git hook installation. Final count: 14 skills, 9 agents, 5 hooks, 9 MCP tools, 14 documentation files.
+Added 3 more skills (`/add-migration`, `/check-deps`, `/test-packages`), created `git_hooks.md` and `ci_cd_guide.md` documentation, and added `scripts/setup-hooks.sh` for easy git hook installation. Final count: 14 skills, 9 agents, 5 hooks, 9 MCP tools, 14 documentation files.
 
 ### 2026-02-04: Documentation Reorganisation
 Moved all documentation files (except CLAUDE.md) to `docs/` directory for cleaner root. Updated all cross-references in CLAUDE.md, instructions.md, skills, and agents.
@@ -80,7 +80,7 @@ Upgraded three polymorphic manager packages to full CRUD compliance:
 
 ### 2026-02-04: Documentation Sync
 Ran `/sync-docs` to update all documentation reflecting the package upgrades:
-- Updated CLAUDE.md, MONOREPO_ANALYSIS.md, instructions.md, memory.md, project-state.md
+- Updated CLAUDE.md, monorepo_analysis.md, instructions.md, memory.md, project-state.md
 - Corrected package counts: 108 total (was 109), 34 blade (was 35)
 - Moved document, image, note from "needs work" to "90% complete"
 
@@ -99,6 +99,20 @@ Migrated multiple packages from old `Interfaces/` pattern to new `Contracts/` pa
 - Fixed 10 broken cross-package references in: City, County, Region, Continent, Country, Page, Post, PostCategory, CaseStudy, CaseStudyCategory
 
 **Documentation Created:**
-- `docs/INTERFACES_REGISTRY.md` - Comprehensive catalogue of ~304 interfaces/contracts across monorepo
-- Added Section 10.22 to `docs/PACKAGE_STANDARDS.md` - Guidance on updating cross-package references when renaming
-- Updated PACKAGE_STANDARDS.md version to 1.7
+- `docs/registry/interfaces_registry.md` - Comprehensive catalogue of ~304 interfaces/contracts across monorepo
+- Added Section 10.22 to `docs/standards/package_standards.md` - Guidance on updating cross-package references when renaming
+- Updated package_standards.md version to 1.7
+
+### 2026-02-06: Documentation Directory Reorganisation
+Reorganised the `docs/` directory from 14 flat files into 4 purpose-based subdirectories:
+
+**Structure:**
+- `docs/standards/` — Architecture standards (package_standards.md, decisions.md + 5 existing sub-docs)
+- `docs/registry/` — Monorepo knowledge base (monorepo_analysis, interfaces_registry, dependencies, database_schema, event_listeners, livewire_components, routes_overview)
+- `docs/guides/` — Development workflows (testing_guide, upgrade_checklist, ci_cd_guide, git_hooks, project_examples)
+- `docs/references/` — External library docs (unchanged)
+
+**Changes:**
+- 14 files moved via `git mv` across 3 subdirectories
+- Created `docs/index.md` as central entry point
+- Updated ~100+ cross-references across ~28 files (CLAUDE.md, .claude/, agents, skills, AGENTS.md, GEMINI.md)

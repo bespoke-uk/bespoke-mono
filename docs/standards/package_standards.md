@@ -13,24 +13,24 @@ This document codifies the architectural standards for all packages in the Bespo
 1. [Package Classification](#1-package-classification)
 2. [Architecture Overview](#2-architecture-overview)
 3. [Required Directory Structure](#3-required-directory-structure)
-4. [Contract Requirements](#4-contract-requirements) → [standards/CONTRACTS.md](standards/CONTRACTS.md)
-5. [ServiceProvider Implementation](#5-serviceprovider-implementation) → [standards/SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md)
-6. [Complete Config File Reference](#6-complete-config-file-reference) → [standards/SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md)
-7. [Code Examples for Each Component](#7-code-examples-for-each-component) → [standards/CODE_EXAMPLES.md](standards/CODE_EXAMPLES.md)
+4. [Contract Requirements](#4-contract-requirements) → [contracts.md](contracts.md)
+5. [ServiceProvider Implementation](#5-serviceprovider-implementation) → [serviceprovider.md](serviceprovider.md)
+6. [Complete Config File Reference](#6-complete-config-file-reference) → [serviceprovider.md](serviceprovider.md)
+7. [Code Examples for Each Component](#7-code-examples-for-each-component) → [code_examples.md](code_examples.md)
 8. [Binding Pattern Reference Table](#8-binding-pattern-reference-table)
-9. [Audit Checklist](#9-audit-checklist) → [standards/AUDIT_CHECKLIST.md](standards/AUDIT_CHECKLIST.md)
-10. [Common Pitfalls](#10-common-pitfalls) → [standards/COMMON_PITFALLS.md](standards/COMMON_PITFALLS.md)
+9. [Audit Checklist](#9-audit-checklist) → [audit_checklist.md](audit_checklist.md)
+10. [Common Pitfalls](#10-common-pitfalls) → [common_pitfalls.md](common_pitfalls.md)
 11. [Quick Reference](#11-quick-reference)
 
 ### Detailed Sub-Documents
 
 | Document | Contents | Lines |
 |----------|----------|-------|
-| [standards/CONTRACTS.md](standards/CONTRACTS.md) | Contract requirements, examples, naming conventions | ~280 |
-| [standards/SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md) | ServiceProvider template, binding methods, config file reference | ~650 |
-| [standards/CODE_EXAMPLES.md](standards/CODE_EXAMPLES.md) | Admin, API, actions, imports, exports, models, traits | ~1240 |
-| [standards/AUDIT_CHECKLIST.md](standards/AUDIT_CHECKLIST.md) | 88-point audit checklist, pre-commit verification | ~370 |
-| [standards/COMMON_PITFALLS.md](standards/COMMON_PITFALLS.md) | 22 common pitfalls with solutions | ~660 |
+| [contracts.md](contracts.md) | Contract requirements, examples, naming conventions | ~280 |
+| [serviceprovider.md](serviceprovider.md) | ServiceProvider template, binding methods, config file reference | ~650 |
+| [code_examples.md](code_examples.md) | Admin, API, actions, imports, exports, models, traits | ~1240 |
+| [audit_checklist.md](audit_checklist.md) | 88-point audit checklist, pre-commit verification | ~370 |
+| [common_pitfalls.md](common_pitfalls.md) | 22 common pitfalls with solutions | ~660 |
 
 ---
 
@@ -51,9 +51,9 @@ CRUD packages manage database entities with create, read, update, and delete ope
 
 **Requirements:**
 - ✅ Full directory structure (Section 3)
-- ✅ 8-13+ contracts ([CONTRACTS.md](standards/CONTRACTS.md))
-- ✅ All relevant binding methods ([SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md))
-- ✅ Complete config file with 20+ sections ([SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md))
+- ✅ 8-13+ contracts ([contracts.md](contracts.md))
+- ✅ All relevant binding methods ([serviceprovider.md](serviceprovider.md))
+- ✅ Complete config file with 20+ sections ([serviceprovider.md](serviceprovider.md))
 - ✅ API controllers, requests, resources, and routes
 - ✅ Import handlers with schema files
 - ✅ Export handlers with blade views
@@ -242,7 +242,7 @@ Bespoke packages are designed to be extended by Laravel applications. When an ap
 
 This ONLY works if all code references contracts, not concrete classes.
 
-> For detailed contract examples and extensibility patterns, see [SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md) and [CONTRACTS.md](standards/CONTRACTS.md).
+> For detailed contract examples and extensibility patterns, see [serviceprovider.md](serviceprovider.md) and [contracts.md](contracts.md).
 
 ### 2.4 Config-Driven Dependency Injection Pattern
 
@@ -265,7 +265,7 @@ protected function registerControllerBindings(): void
 }
 ```
 
-> For complete ServiceProvider template and all binding method patterns, see [SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md).
+> For complete ServiceProvider template and all binding method patterns, see [serviceprovider.md](serviceprovider.md).
 
 ---
 
@@ -586,7 +586,7 @@ The migration filename (without extension) is also used in the config `migration
 
 ## 4. Contract Requirements
 
-> **Full documentation:** [standards/CONTRACTS.md](standards/CONTRACTS.md)
+> **Full documentation:** [contracts.md](contracts.md)
 
 Every CRUD package MUST have at minimum 10-15 contracts. Contracts are located in `src/Contracts/` (NOT `src/Interfaces/`).
 
@@ -605,13 +605,13 @@ Every CRUD package MUST have at minimum 10-15 contracts. Contracts are located i
 | Export | `src/Contracts/` | ✅ Always |
 | Validation Rules | `src/Contracts/` | 📋 If custom rules |
 
-See [CONTRACTS.md](standards/CONTRACTS.md) for complete examples of each contract type, naming conventions, and the marker interface pattern.
+See [contracts.md](contracts.md) for complete examples of each contract type, naming conventions, and the marker interface pattern.
 
 ---
 
 ## 5. ServiceProvider Implementation
 
-> **Full documentation:** [standards/SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md)
+> **Full documentation:** [serviceprovider.md](serviceprovider.md)
 
 The ServiceProvider is the heart of every package. It extends `PackageServiceProvider` and configures the package through `configurePackage()` and binding methods.
 
@@ -621,26 +621,26 @@ The ServiceProvider is the heart of every package. It extends `PackageServicePro
 - Each binding method with full implementation example
 - Lifecycle hooks (`registeringPackage`, `packageRegistered`, `bootingPackage`, `packageBooted`)
 
-See [SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md) for the complete reference.
+See [serviceprovider.md](serviceprovider.md) for the complete reference.
 
 ---
 
 ## 6. Complete Config File Reference
 
-> **Full documentation:** [standards/SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md) (Section 6)
+> **Full documentation:** [serviceprovider.md](serviceprovider.md) (Section 6)
 
 CRUD packages require 20+ config sections. The config file uses nested structure for `controllers`, `requests`, and `resources`.
 
 **Required sections (in order):**
 `aliases`, `actions`, `casts`, `commands`, `components`, `controllers`, `defaults`, `export`, `fillable`, `import`, `listeners`, `livewire`, `loggable`, `middlewares`, `migrations`, `models`, `module`, `requests`, `resources`, `responses`, `routes`, `route_prefixes`, `rules`
 
-See [SERVICEPROVIDER.md](standards/SERVICEPROVIDER.md) for the complete config file template with all sections.
+See [serviceprovider.md](serviceprovider.md) for the complete config file template with all sections.
 
 ---
 
 ## 7. Code Examples for Each Component
 
-> **Full documentation:** [standards/CODE_EXAMPLES.md](standards/CODE_EXAMPLES.md)
+> **Full documentation:** [code_examples.md](code_examples.md)
 
 Complete implementation examples for every component type:
 
@@ -654,7 +654,7 @@ Complete implementation examples for every component type:
 | Models | 7.6 |
 | Relationship Traits | 7.7 |
 
-See [CODE_EXAMPLES.md](standards/CODE_EXAMPLES.md) for all examples.
+See [code_examples.md](code_examples.md) for all examples.
 
 ---
 
@@ -684,7 +684,7 @@ See [CODE_EXAMPLES.md](standards/CODE_EXAMPLES.md) for all examples.
 
 ## 9. Audit Checklist
 
-> **Full documentation:** [standards/AUDIT_CHECKLIST.md](standards/AUDIT_CHECKLIST.md)
+> **Full documentation:** [audit_checklist.md](audit_checklist.md)
 
 **IMPORTANT:** The checklist applies to **CRUD packages only**. Utility packages do not need to meet these requirements.
 
@@ -703,13 +703,13 @@ The audit checklist covers 88 points across 7 categories:
 
 The sub-document also includes pre-commit verification commands, contract-implementation alignment checks, and lessons learned from previous audits.
 
-See [AUDIT_CHECKLIST.md](standards/AUDIT_CHECKLIST.md) for the complete checklist.
+See [audit_checklist.md](audit_checklist.md) for the complete checklist.
 
 ---
 
 ## 10. Common Pitfalls
 
-> **Full documentation:** [standards/COMMON_PITFALLS.md](standards/COMMON_PITFALLS.md)
+> **Full documentation:** [common_pitfalls.md](common_pitfalls.md)
 
 22 documented pitfalls with code examples and solutions:
 
@@ -726,7 +726,7 @@ See [AUDIT_CHECKLIST.md](standards/AUDIT_CHECKLIST.md) for the complete checklis
 | 9 | Forcing CRUD patterns on utility packages | Medium |
 | 10-22 | See sub-document for full list | Various |
 
-See [COMMON_PITFALLS.md](standards/COMMON_PITFALLS.md) for all pitfalls with detailed explanations and solutions.
+See [common_pitfalls.md](common_pitfalls.md) for all pitfalls with detailed explanations and solutions.
 
 ---
 
@@ -827,9 +827,9 @@ test -f tests/TestCase.php && echo "✓ TestCase.php exists" || echo "✗ Missin
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.9 | 2026-02-06 | **Document reorganisation:** Split into concise index + 5 focused sub-documents in `docs/standards/`. No content changes — all information preserved. Sub-documents: CONTRACTS.md, SERVICEPROVIDER.md, CODE_EXAMPLES.md, AUDIT_CHECKLIST.md, COMMON_PITFALLS.md. |
+| 1.9 | 2026-02-06 | **Document reorganisation:** Split into concise index + 5 focused sub-documents in `docs/standards/`. No content changes — all information preserved. Sub-documents: contracts.md, serviceprovider.md, code_examples.md, audit_checklist.md, common_pitfalls.md. |
 | 1.8 | 2026-02-06 | **Composer & testing standards:** Added Section 3.3 (composer.json Requirements) defining mandatory require, require-dev, scripts, and config sections for all packages. Added Section 3.4 (Testing Requirements) mandating PHPUnit over Pest with reference TestCase and ExampleTest examples. Added Section 3.5 (Migration Naming Convention) requiring `.php.stub` extension and no datetime prefix. Updated directory tree to reflect correct migration naming and test file structure. |
-| 1.7 | 2026-02-05 | **Actions layer standardisation:** Expanded Section 7.3 with standalone CRUD action patterns (Create/Update/Delete). Added complete examples for action contracts, ServiceProvider registration, and config. Added note on import alias conflicts. Fixed `ContactsInterface` → `Contracts\Contacts` reference. Updated default packages (continent, country, redirect) now have full Actions layer. See ADR-012 in DECISIONS.md. |
+| 1.7 | 2026-02-05 | **Actions layer standardisation:** Expanded Section 7.3 with standalone CRUD action patterns (Create/Update/Delete). Added complete examples for action contracts, ServiceProvider registration, and config. Added note on import alias conflicts. Fixed `ContactsInterface` → `Contracts\Contacts` reference. Updated default packages (continent, country, redirect) now have full Actions layer. See ADR-012 in decisions.md. |
 | 1.6 | 2026-02-04 | **Service contracts:** Added pitfalls 10.20-10.21 (Empty Contract Interfaces, Service Classes Not Implementing Contracts) with detection commands. Updated Section 12.6 lessons learned with default package audit findings. |
 | 1.5 | 2026-02-04 | **Extensibility focus:** Added core principles 5-6 (No Concrete Implementations, Package Extensibility). Expanded Section 2.3 with extensibility example. Added pitfall 10.18 (Using Concrete Implementations Instead of Contracts). Updated verification commands and pre-commit checklist. |
 | 1.4 | 2026-02-04 | **Major update:** API resources now require contracts. Added resource contract requirements, `registerResourceBindings()`, pitfall 10.17 (API controllers using concrete classes), updated audit checklists. |

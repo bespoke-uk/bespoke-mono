@@ -1,6 +1,6 @@
 # Package Upgrade Checklist
 
-This checklist guides upgrading older Bespoke packages to meet current PACKAGE_STANDARDS.md compliance.
+This checklist guides upgrading older Bespoke packages to meet current package_standards.md compliance.
 
 ## Quick Assessment
 
@@ -319,6 +319,6 @@ And config file is at `config/{package-name}.php`.
 ## Reference
 
 - **Gold Standard:** `/crm/contact` (100% compliant)
-- **Standards Document:** `PACKAGE_STANDARDS.md`
+- **Standards Document:** `package_standards.md`
 - **Upgrade Skill:** `/upgrade-package {path}`
 - **Audit Skill:** `/audit {path}`

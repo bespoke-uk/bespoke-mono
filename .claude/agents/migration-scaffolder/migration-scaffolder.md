@@ -240,7 +240,7 @@ The `.stub` extension tells Laravel to add timestamps when publishing.
 1. Review generated migration
 2. Adjust column types/constraints as needed
 3. Run `composer test` to verify
-4. Update DATABASE_SCHEMA.md if significant change
+4. Update database_schema.md if significant change
 ```
 
 ## Column Type Reference

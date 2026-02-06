@@ -304,7 +304,7 @@ public function created({ModelName} ${model_name}): void
 1. Implement listener logic
 2. Consider if listener should be queued
 3. Add tests for event/listener
-4. Update docs/EVENT_LISTENERS.md documentation
+4. Update docs/registry/event_listeners.md documentation
 ```
 
 ## Important Notes
@@ -314,4 +314,4 @@ public function created({ModelName} ${model_name}): void
 - Use contracts for model type hints
 - Events are registered via config `listeners` array
 - Consider using queued listeners for slow operations
-- Update docs/EVENT_LISTENERS.md after adding significant events
+- Update docs/registry/event_listeners.md after adding significant events

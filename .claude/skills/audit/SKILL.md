@@ -1,6 +1,6 @@
 ---
 name: audit
-description: Audit a Bespoke package against docs/PACKAGE_STANDARDS.md compliance requirements
+description: Audit a Bespoke package against docs/standards/package_standards.md compliance requirements
 argument-hint: "<package-path>"
 user-invocable: true
 allowed-tools:
@@ -11,7 +11,7 @@ context: fork
 agent: package-auditor
 ---
 
-Audit the package at the specified path against docs/PACKAGE_STANDARDS.md.
+Audit the package at the specified path against docs/standards/package_standards.md.
 
 **Package Path:** $ARGUMENTS
 
@@ -29,6 +29,6 @@ Output a detailed report with:
 - Overall compliance score and percentage
 - Checklist for each category
 - Specific recommendations for improvement
-- References to docs/PACKAGE_STANDARDS.md sections
+- References to docs/standards/package_standards.md sections
 
 Compare against `/crm/contact` as the reference implementation (100% compliant).

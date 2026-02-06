@@ -3,9 +3,9 @@
 This document shows typical project configurations for the Bespoke CMS monorepo, helping developers understand how packages are composed for different use cases.
 
 **Related Documentation:**
-- [CLAUDE.md](CLAUDE.md) - Quick reference
-- [PACKAGE_STANDARDS.md](PACKAGE_STANDARDS.md) - Architecture standards
-- [MONOREPO_ANALYSIS.md](MONOREPO_ANALYSIS.md) - Complete package analysis
+- [CLAUDE.md](../../CLAUDE.md) - Quick reference
+- [package_standards.md](../standards/package_standards.md) - Architecture standards
+- [monorepo_analysis.md](../registry/monorepo_analysis.md) - Complete package analysis
 
 ---
 

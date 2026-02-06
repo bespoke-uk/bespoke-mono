@@ -49,7 +49,7 @@ All packages will use `src/Contracts/` for interface definitions. Existing `src/
 
 **Core packages (complete):** module (14 interfaces), document, image, note, editor (3), employee (2), user (2), setting (4)
 
-**Remaining packages:** See [INTERFACES_REGISTRY.md](./INTERFACES_REGISTRY.md) section 1 for non-core packages still needing migration.
+**Remaining packages:** See [interfaces_registry.md](../registry/interfaces_registry.md) section 1 for non-core packages still needing migration.
 
 ---
 
@@ -345,7 +345,7 @@ The monorepo contains 108 packages with extensive cross-package dependencies. Tr
 A concrete example: renaming `Bespoke\Seo\Interfaces\SeoInterface` to `Bespoke\Seo\Contracts\Seo` broke 10 packages that implemented the old interface.
 
 ### Decision
-1. **Maintain an Interface Registry** (`docs/INTERFACES_REGISTRY.md`) cataloguing all ~304 interfaces/contracts with their full namespaces and usage patterns.
+1. **Maintain an Interface Registry** (`docs/registry/interfaces_registry.md`) cataloguing all ~304 interfaces/contracts with their full namespaces and usage patterns.
 
 2. **Mandatory Search Before Rename** - Before renaming any interface or contract, search the entire monorepo:
    ```bash
@@ -354,7 +354,7 @@ A concrete example: renaming `Bespoke\Seo\Interfaces\SeoInterface` to `Bespoke\S
 
 3. **Document High-Impact Interfaces** - Trait interfaces that are implemented by many packages are flagged as "HIGH" priority in the registry.
 
-4. **Add Guidance to PACKAGE_STANDARDS.md** - Section 10.22 documents the pitfall and provides commands for safe renaming.
+4. **Add Guidance to package_standards.md** - Section 10.22 documents the pitfall and provides commands for safe renaming.
 
 ### Consequences
 - **Positive:** Prevents silent breakages across packages

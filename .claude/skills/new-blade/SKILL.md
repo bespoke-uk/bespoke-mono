@@ -282,7 +282,7 @@ composer analyse
 2. Add markup to resources/views/components/{component-name}.blade.php
 3. Add properties and slots as needed
 4. Write tests
-5. Update LIVEWIRE_COMPONENTS.md if this is a Livewire component
+5. Update livewire_components.md if this is a Livewire component
 ```
 
 ## Important Notes

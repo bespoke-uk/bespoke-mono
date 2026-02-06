@@ -1,6 +1,6 @@
 ---
 name: docs-reviewer
-description: Reviews and updates monorepo documentation after significant changes. Analyses recent work and ensures CLAUDE.md, docs/MONOREPO_ANALYSIS.md, and other docs stay in sync.
+description: Reviews and updates monorepo documentation after significant changes. Analyses recent work and ensures CLAUDE.md, docs/registry/monorepo_analysis.md, and other docs stay in sync.
 tools:
   - Read
   - Glob
@@ -25,14 +25,14 @@ Analyse recent changes and update the relevant documentation files to reflect:
 | File | Purpose | Update When |
 |------|---------|-------------|
 | `CLAUDE.md` | Main reference guide | Structure, tooling, or patterns change |
-| `docs/MONOREPO_ANALYSIS.md` | Package-by-package analysis | Package status or counts change |
-| `docs/PACKAGE_STANDARDS.md` | Architecture standards | Standards or patterns evolve |
+| `docs/registry/monorepo_analysis.md` | Package-by-package analysis | Package status or counts change |
+| `docs/standards/package_standards.md` | Architecture standards | Standards or patterns evolve |
 | `.claude/instructions.md` | Session-persistent instructions | Skills, hooks, or workflows change |
-| `PROJECT_EXAMPLES.md` | Project configurations | New project patterns emerge |
-| `docs/EVENT_LISTENERS.md` | Event/listener mappings | Events or listeners added |
-| `DATABASE_SCHEMA.md` | Database structure | Migrations or tables change |
-| `LIVEWIRE_COMPONENTS.md` | Component registry | Components added/removed |
-| `ROUTES_OVERVIEW.md` | Route documentation | Routes change |
+| `docs/guides/project_examples.md` | Project configurations | New project patterns emerge |
+| `docs/registry/event_listeners.md` | Event/listener mappings | Events or listeners added |
+| `docs/registry/database_schema.md` | Database structure | Migrations or tables change |
+| `docs/registry/livewire_components.md` | Component registry | Components added/removed |
+| `docs/registry/routes_overview.md` | Route documentation | Routes change |
 
 ## Review Process
 
@@ -54,7 +54,7 @@ find . -type f -name "*.md" -mmin -60 2>/dev/null | head -20
 
 Read the key documentation files to understand their current state:
 - `CLAUDE.md` - Check package counts, tooling sections, structure
-- `docs/MONOREPO_ANALYSIS.md` - Check version history, package statuses
+- `docs/registry/monorepo_analysis.md` - Check version history, package statuses
 - `.claude/instructions.md` - Check skills and hooks listed
 
 ### Step 3: Identify Discrepancies
@@ -103,7 +103,7 @@ After completing your review, provide a summary:
 Files Reviewed: X
 Files Updated: X
   - CLAUDE.md: [description of changes]
-  - docs/MONOREPO_ANALYSIS.md: [description of changes]
+  - docs/registry/monorepo_analysis.md: [description of changes]
   - ...
 
 No Updates Needed: X files

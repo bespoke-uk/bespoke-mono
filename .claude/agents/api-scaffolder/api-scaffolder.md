@@ -409,4 +409,4 @@ protected function registerResourceBindings(): void
 ## Reference
 
 - Use `/crm/contact` for API implementation patterns
-- Follow `docs/PACKAGE_STANDARDS.md` Section 7.2 for API components
+- Follow `docs/standards/package_standards.md` Section 7.2 for API components

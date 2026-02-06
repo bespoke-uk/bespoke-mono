@@ -3,9 +3,9 @@
 This document maps cross-package event communication in the Bespoke CMS monorepo, showing which packages fire events, which listen, and how they interact.
 
 **Related Documentation:**
-- [CLAUDE.md](CLAUDE.md) - Quick reference
-- [PACKAGE_STANDARDS.md](PACKAGE_STANDARDS.md) - Architecture standards
-- [MONOREPO_ANALYSIS.md](MONOREPO_ANALYSIS.md) - Complete package analysis
+- [CLAUDE.md](../../CLAUDE.md) - Quick reference
+- [package_standards.md](../standards/package_standards.md) - Architecture standards
+- [monorepo_analysis.md](monorepo_analysis.md) - Complete package analysis
 
 ---
 

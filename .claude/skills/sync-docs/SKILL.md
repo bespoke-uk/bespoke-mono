@@ -19,21 +19,21 @@ Review all monorepo documentation files and update them to reflect the current s
 ## What This Skill Does
 
 1. **Analyses recent changes** - Checks git status and recently modified files
-2. **Reviews documentation** - Reads CLAUDE.md, docs/MONOREPO_ANALYSIS.md, and other docs
+2. **Reviews documentation** - Reads CLAUDE.md, docs/registry/monorepo_analysis.md, and other docs
 3. **Identifies discrepancies** - Compares documentation against actual codebase
 4. **Updates as needed** - Edits documentation to fix inaccuracies
 
 ## Documentation Files Reviewed
 
 - `CLAUDE.md` - Main reference guide
-- `docs/MONOREPO_ANALYSIS.md` - Package analysis
-- `docs/PACKAGE_STANDARDS.md` - Architecture standards
+- `docs/registry/monorepo_analysis.md` - Package analysis
+- `docs/standards/package_standards.md` - Architecture standards
 - `.claude/instructions.md` - Session instructions
-- `PROJECT_EXAMPLES.md` - Project configurations
-- `docs/EVENT_LISTENERS.md` - Event mappings
-- `DATABASE_SCHEMA.md` - Database structure
-- `LIVEWIRE_COMPONENTS.md` - Component registry
-- `ROUTES_OVERVIEW.md` - Route documentation
+- `docs/guides/project_examples.md` - Project configurations
+- `docs/registry/event_listeners.md` - Event mappings
+- `docs/registry/database_schema.md` - Database structure
+- `docs/registry/livewire_components.md` - Component registry
+- `docs/registry/routes_overview.md` - Route documentation
 
 ## Usage
 

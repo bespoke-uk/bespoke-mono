@@ -10,32 +10,33 @@ This is the **Bespoke CMS monorepo** containing **108 Laravel packages** organis
 **PHP Version:** ^8.2
 **Laravel Version:** 10.x, 11.x, 12.x
 
-**Related Documentation:** (in `docs/`)
+**Related Documentation:** (in `docs/` — see [index.md](docs/index.md) for full directory)
 
 | Document | Purpose |
 |----------|---------|
-| **[PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md)** | Architecture standards and compliance requirements (~850 line index + 5 sub-documents in `docs/standards/`) |
-| **[MONOREPO_ANALYSIS.md](docs/MONOREPO_ANALYSIS.md)** | Complete analysis of all 108 packages with status |
-| **[PROJECT_EXAMPLES.md](docs/PROJECT_EXAMPLES.md)** | Typical project configurations and package combinations |
-| **[EVENT_LISTENERS.md](docs/EVENT_LISTENERS.md)** | Cross-package event communication (88 events, 31 listeners) |
-| **[DATABASE_SCHEMA.md](docs/DATABASE_SCHEMA.md)** | All database tables, relationships, and migrations |
-| **[LIVEWIRE_COMPONENTS.md](docs/LIVEWIRE_COMPONENTS.md)** | Component registry (98 Livewire components) |
-| **[ROUTES_OVERVIEW.md](docs/ROUTES_OVERVIEW.md)** | API, admin, and frontend routes across all packages |
-| **[TESTING_GUIDE.md](docs/TESTING_GUIDE.md)** | Testing standards, patterns, and examples |
-| **[DECISIONS.md](docs/DECISIONS.md)** | Architectural decision records (ADRs) |
-| **[UPGRADE_CHECKLIST.md](docs/UPGRADE_CHECKLIST.md)** | Step-by-step package upgrade guide |
-| **[GIT_HOOKS.md](docs/GIT_HOOKS.md)** | Git hooks setup and configuration |
-| **[CI_CD_GUIDE.md](docs/CI_CD_GUIDE.md)** | CI/CD pipeline integration guide |
-| **[INTERFACES_REGISTRY.md](docs/INTERFACES_REGISTRY.md)** | Complete catalogue of ~304 interfaces and contracts |
+| **[index.md](docs/index.md)** | Central entry point for all documentation |
+| **[package_standards.md](docs/standards/package_standards.md)** | Architecture standards and compliance requirements (~850 line index + 5 sub-documents) |
+| **[monorepo_analysis.md](docs/registry/monorepo_analysis.md)** | Complete analysis of all 108 packages with status |
+| **[project_examples.md](docs/guides/project_examples.md)** | Typical project configurations and package combinations |
+| **[event_listeners.md](docs/registry/event_listeners.md)** | Cross-package event communication (88 events, 31 listeners) |
+| **[database_schema.md](docs/registry/database_schema.md)** | All database tables, relationships, and migrations |
+| **[livewire_components.md](docs/registry/livewire_components.md)** | Component registry (98 Livewire components) |
+| **[routes_overview.md](docs/registry/routes_overview.md)** | API, admin, and frontend routes across all packages |
+| **[testing_guide.md](docs/guides/testing_guide.md)** | Testing standards, patterns, and examples |
+| **[decisions.md](docs/standards/decisions.md)** | Architectural decision records (ADRs) |
+| **[upgrade_checklist.md](docs/guides/upgrade_checklist.md)** | Step-by-step package upgrade guide |
+| **[git_hooks.md](docs/guides/git_hooks.md)** | Git hooks setup and configuration |
+| **[ci_cd_guide.md](docs/guides/ci_cd_guide.md)** | CI/CD pipeline integration guide |
+| **[interfaces_registry.md](docs/registry/interfaces_registry.md)** | Complete catalogue of ~304 interfaces and contracts |
 
 **Library References:** (in `docs/references/`)
 
 | Document | Purpose |
 |----------|---------|
-| `laravel_10_docs.md` | Laravel 10 framework reference |
-| `laravel_livewire_v2_docs.md` | Livewire v2 component patterns |
-| `tailwind.css_v3_docs.md` | Tailwind CSS utility classes |
-| `vue.js_v2_docs.md` | Vue.js v2 frontend patterns |
+| `bespoke_cheatsheet.md` | **Concise patterns cheat sheet** — real examples from this monorepo (read this first) |
+| `laravel_10_docs.md` | Laravel 10 framework reference (full) |
+| `laravel_livewire_v2_docs.md` | Livewire v2 component patterns (full) |
+| `tailwind.css_v3_docs.md` | Tailwind CSS utility classes (full) |
 
 **Claude Code Tooling:**
 
@@ -70,7 +71,7 @@ This is the **Bespoke CMS monorepo** containing **108 Laravel packages** organis
 Packages fall into two categories with different compliance requirements:
 
 ### CRUD Packages (Full Standards Compliance Required)
-Packages that manage database entities with create, read, update, delete operations. These MUST follow full PACKAGE_STANDARDS.md requirements including API, exports, and imports.
+Packages that manage database entities with create, read, update, delete operations. These MUST follow full package_standards.md requirements including API, exports, and imports.
 
 **Examples:** `crm/contact`, `crm/customer`, `core/user`, `core/employee`, `core/profile`, `core/document`, `core/image`, `core/note`
 
@@ -162,6 +163,11 @@ bespoke/
 ├── custom/         # Client-specific packages (6 packages)
 ├── default/        # Default utilities (9 packages)
 │                   # cloudflare, cookie, country, pwa, redirect, seo, etc.
+├── docs/           # Documentation (see docs/index.md)
+│   ├── standards/  # Architecture standards and compliance
+│   ├── registry/   # Monorepo knowledge base (analysis, schemas, routes)
+│   ├── guides/     # Development workflows (testing, upgrades, CI/CD)
+│   └── references/ # External library docs (Laravel, Livewire, Tailwind)
 ├── ecommerce/      # E-commerce packages (1 package)
 │                   # product
 ├── template/       # Package templates and tools
@@ -271,7 +277,7 @@ protected function registerModelBindings(): void
 }
 ```
 
-See [SERVICEPROVIDER.md](docs/standards/SERVICEPROVIDER.md) for complete examples.
+See [serviceprovider.md](docs/standards/serviceprovider.md) for complete examples.
 
 ### Config-Based Registration
 
@@ -349,7 +355,7 @@ package-name/
 └── pint.json
 ```
 
-See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 3 for full directory requirements.
+See [package_standards.md](docs/standards/package_standards.md) Section 3 for full directory requirements.
 
 ## Contract-First Development
 
@@ -369,7 +375,7 @@ See [PACKAGE_STANDARDS.md](docs/PACKAGE_STANDARDS.md) Section 3 for full directo
 
 **Important:** Use `Contracts/` directory, NOT `Interfaces/`.
 
-See [CONTRACTS.md](docs/standards/CONTRACTS.md) for contract examples.
+See [contracts.md](docs/standards/contracts.md) for contract examples.
 
 ## Required Package Functionality
 
@@ -460,7 +466,7 @@ Each package has its own documentation:
 3. **`core/profile`** (45%) - Add API endpoints
 4. **`ecommerce/product`** (25%) - Scaffold only, needs full implementation
 
-See [MONOREPO_ANALYSIS.md](docs/MONOREPO_ANALYSIS.md) for complete package-by-package analysis.
+See [monorepo_analysis.md](docs/registry/monorepo_analysis.md) for complete package-by-package analysis.
 
 ## Config File Structure
 
@@ -490,7 +496,7 @@ return [
 ];
 ```
 
-See [SERVICEPROVIDER.md](docs/standards/SERVICEPROVIDER.md) for complete config reference.
+See [serviceprovider.md](docs/standards/serviceprovider.md) for complete config reference.
 
 ## Testing
 
@@ -522,7 +528,7 @@ test -f routes/api.php && echo "✓ API routes" || echo "✗ Missing"
 test -d src/Interfaces && echo "⚠ Rename to Contracts/" || echo "✓ Using Contracts/"
 ```
 
-See [AUDIT_CHECKLIST.md](docs/standards/AUDIT_CHECKLIST.md) for the complete 88-point audit checklist (CRUD packages only).
+See [audit_checklist.md](docs/standards/audit_checklist.md) for the complete 88-point audit checklist (CRUD packages only).
 
 ## Common Pitfalls
 
@@ -534,7 +540,7 @@ See [AUDIT_CHECKLIST.md](docs/standards/AUDIT_CHECKLIST.md) for the complete 88-
 6. **API routes using IDs** - Use `{model:uuid}` pattern instead
 7. **Forcing CRUD patterns on utility packages** - Utility packages don't need API, exports, or imports
 
-See [COMMON_PITFALLS.md](docs/standards/COMMON_PITFALLS.md) for 22 common pitfalls with solutions.
+See [common_pitfalls.md](docs/standards/common_pitfalls.md) for 22 common pitfalls with solutions.
 
 ## Claude Code Customisations
 
@@ -544,7 +550,7 @@ This repository includes custom Claude Code tooling in `.claude/`:
 
 | Skill | Usage | Description |
 |-------|-------|-------------|
-| `/audit` | `/audit <package-path>` | Audit package against PACKAGE_STANDARDS.md (88-point scoring) |
+| `/audit` | `/audit <package-path>` | Audit package against package_standards.md (88-point scoring) |
 | `/new-crud` | `/new-crud <category/name>` | Scaffold new CRUD package from skeleton-crud template |
 | `/new-blade` | `/new-blade <component-name>` | Create new Blade component package |
 | `/add-api` | `/add-api <package-path>` | Add complete RESTful API to existing package |

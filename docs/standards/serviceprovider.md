@@ -1,6 +1,6 @@
 # ServiceProvider & Config Reference
 
-> Extracted from [PACKAGE_STANDARDS.md](../PACKAGE_STANDARDS.md) — Sections 5 and 6
+> Extracted from [package_standards.md](package_standards.md) — Sections 5 and 6
 
 ---
 

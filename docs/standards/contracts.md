@@ -1,6 +1,6 @@
 # Contract Requirements
 
-> Extracted from [PACKAGE_STANDARDS.md](../PACKAGE_STANDARDS.md) — Section 4
+> Extracted from [package_standards.md](package_standards.md) — Section 4
 
 **Reference Implementation:** `/crm/contact`
 

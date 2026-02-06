@@ -23,7 +23,7 @@ This file stores persistent context, preferences, and notes for Claude Code sess
 ## Project Context
 
 ### Current Focus Areas
-- Bringing packages up to docs/PACKAGE_STANDARDS.md compliance
+- Bringing packages up to docs/standards/package_standards.md compliance
 - Ensuring consistent API patterns across CRUD packages
 - Improving test coverage
 
@@ -38,20 +38,20 @@ This file stores persistent context, preferences, and notes for Claude Code sess
 - `core/module` - 13 interfaces (LOW priority - framework level)
 - `core/setting` - 4 interfaces (LOW priority - constants)
 
-See `docs/INTERFACES_REGISTRY.md` for complete list of 30 legacy interfaces.
+See `docs/registry/interfaces_registry.md` for complete list of 30 legacy interfaces.
 
 ### Architectural Decisions
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
 | 2026-02-04 | Use `Contracts/` not `Interfaces/` | Consistency with Laravel ecosystem conventions |
-| 2026-02-04 | Always search monorepo before renaming | Cross-package dependencies can break silently (see PACKAGE_STANDARDS.md 10.22) |
-| 2026-02-04 | Document all interfaces in registry | Created `docs/INTERFACES_REGISTRY.md` to track ~304 interfaces/contracts |
+| 2026-02-04 | Always search monorepo before renaming | Cross-package dependencies can break silently (see package_standards.md 10.22) |
+| 2026-02-04 | Document all interfaces in registry | Created `docs/registry/interfaces_registry.md` to track ~304 interfaces/contracts |
 
 ## Package Notes
 
 ### High Priority Packages
-Packages needing attention (from docs/MONOREPO_ANALYSIS.md):
+Packages needing attention (from docs/registry/monorepo_analysis.md):
 - `core/user` (55%) - Needs exports/imports
 - `core/profile` (45%) - Needs API endpoints
 - `ecommerce/product` (25%) - Scaffold only, needs full implementation

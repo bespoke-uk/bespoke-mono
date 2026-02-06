@@ -31,29 +31,30 @@ Use these slash commands for common operations:
 
 ## Key Documentation
 
-Read these files for comprehensive context (in `docs/` directory):
+Read these files for comprehensive context (in `docs/` — see `docs/index.md` for full directory):
 
 | File | Purpose |
 |------|---------|
 | `CLAUDE.md` | Quick reference, package types, structure (root) |
-| `docs/PACKAGE_STANDARDS.md` | Architecture standards (1200+ lines) |
-| `docs/MONOREPO_ANALYSIS.md` | Complete 108-package analysis |
-| `docs/PROJECT_EXAMPLES.md` | Typical project configurations |
-| `docs/EVENT_LISTENERS.md` | Cross-package event communication |
-| `docs/DATABASE_SCHEMA.md` | All tables and relationships |
-| `docs/LIVEWIRE_COMPONENTS.md` | Component registry (98 components) |
-| `docs/ROUTES_OVERVIEW.md` | API, admin, and frontend routes |
-| `docs/TESTING_GUIDE.md` | Testing standards and patterns |
-| `docs/DECISIONS.md` | Architectural decision records |
-| `docs/UPGRADE_CHECKLIST.md` | Package upgrade guide |
-| `docs/GIT_HOOKS.md` | Git hooks setup |
-| `docs/CI_CD_GUIDE.md` | CI/CD integration guide |
+| `docs/index.md` | Central entry point for all documentation |
+| `docs/standards/package_standards.md` | Architecture standards (1200+ lines) |
+| `docs/registry/monorepo_analysis.md` | Complete 108-package analysis |
+| `docs/guides/project_examples.md` | Typical project configurations |
+| `docs/registry/event_listeners.md` | Cross-package event communication |
+| `docs/registry/database_schema.md` | All tables and relationships |
+| `docs/registry/livewire_components.md` | Component registry (98 components) |
+| `docs/registry/routes_overview.md` | API, admin, and frontend routes |
+| `docs/guides/testing_guide.md` | Testing standards and patterns |
+| `docs/standards/decisions.md` | Architectural decision records |
+| `docs/guides/upgrade_checklist.md` | Package upgrade guide |
+| `docs/guides/git_hooks.md` | Git hooks setup |
+| `docs/guides/ci_cd_guide.md` | CI/CD integration guide |
 
 **Library References** (in `docs/references/`):
-- `laravel_10_docs.md` - Laravel framework patterns
-- `laravel_livewire_v2_docs.md` - Livewire component patterns (consult for Livewire work)
-- `tailwind.css_v3_docs.md` - Tailwind CSS utilities (consult for Blade styling)
-- `vue.js_v2_docs.md` - Vue.js patterns
+- `bespoke_cheatsheet.md` - **Concise patterns cheat sheet** (read this first for real examples)
+- `laravel_10_docs.md` - Laravel framework patterns (full)
+- `laravel_livewire_v2_docs.md` - Livewire v2 component patterns (full)
+- `tailwind.css_v3_docs.md` - Tailwind CSS utilities (full)
 
 ## Package Classification
 
@@ -154,7 +155,7 @@ composer format            # Laravel Pint
 2. **Run deep audit with `package-auditor` agent** to understand true state
 3. **Check if CRUD or Utility** - determines requirements
 4. **Use `/crm/contact` as reference** for CRUD patterns
-5. **Follow `docs/PACKAGE_STANDARDS.md`** for new implementations
+5. **Follow `docs/standards/package_standards.md`** for new implementations
 6. **Run `composer format` and `composer analyse`** before commits
 
 ## File Naming Conventions

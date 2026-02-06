@@ -30,7 +30,7 @@ Steps:
 1. Copy `/template/skeleton-crud` to the target location
 2. Replace all placeholders with package-specific values
 3. Rename files to match the model name
-4. Create full directory structure per docs/PACKAGE_STANDARDS.md
+4. Create full directory structure per docs/standards/package_standards.md
 5. Generate all required contracts
 6. Configure ServiceProvider with all binding methods
 7. Set up config file with 22 sections

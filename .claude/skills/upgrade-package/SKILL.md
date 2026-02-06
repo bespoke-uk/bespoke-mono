@@ -14,7 +14,7 @@ context: fork
 agent: package-auditor
 ---
 
-Upgrade the package at the specified path to meet current docs/PACKAGE_STANDARDS.md compliance.
+Upgrade the package at the specified path to meet current docs/standards/package_standards.md compliance.
 
 **Package Path:** $ARGUMENTS
 
@@ -185,5 +185,5 @@ composer test
 ## Reference
 
 - Use `/crm/contact` as the gold standard (100% compliant)
-- See docs/PACKAGE_STANDARDS.md for detailed requirements
-- See docs/UPGRADE_CHECKLIST.md for step-by-step guide
+- See docs/standards/package_standards.md for detailed requirements
+- See docs/guides/upgrade_checklist.md for step-by-step guide

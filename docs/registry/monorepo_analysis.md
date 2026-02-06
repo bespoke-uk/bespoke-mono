@@ -17,8 +17,8 @@ This document provides deep context about every package in the monorepo. Use it 
 4. **Find reference implementations** - Use `crm/contact` as the gold standard for CRUD packages
 
 **Related Documentation:**
-- **[PACKAGE_STANDARDS.md](PACKAGE_STANDARDS.md)** - Architecture standards and compliance requirements
-- **[CLAUDE.md](CLAUDE.md)** - Quick reference for working with the codebase
+- **[package_standards.md](../standards/package_standards.md)** - Architecture standards and compliance requirements
+- **[CLAUDE.md](../../CLAUDE.md)** - Quick reference for working with the codebase
 
 ---
 
@@ -408,7 +408,7 @@ Utility Dependencies
 
 ## Reference Implementation
 
-The **`/crm/contact`** package is the reference implementation for PACKAGE_STANDARDS.md compliance:
+The **`/crm/contact`** package is the reference implementation for package_standards.md compliance:
 
 - **Contracts:** 13 (with Admin subdirectory)
 - **Binding Methods:** 7 implemented
@@ -429,7 +429,7 @@ The following core utility packages are correctly simplified and do NOT need API
 - activity, backup, captcha, chart, core, dashboard, editor, module, security, two-factor
 
 ### Packages Needing Improvement
-Based on PACKAGE_STANDARDS.md analysis:
+Based on package_standards.md analysis:
 1. **employee** - Add missing binding methods, expand contracts
 2. **user** - Add exports/imports, expand contracts
 3. **profile** - Add API endpoints
@@ -581,7 +581,7 @@ Custom tooling available for working with this monorepo:
 
 | Command | Description |
 |---------|-------------|
-| `/audit <path>` | Audit package against PACKAGE_STANDARDS.md |
+| `/audit <path>` | Audit package against package_standards.md |
 | `/new-crud <category/name>` | Scaffold new CRUD package |
 | `/add-api <path>` | Add RESTful API to existing package |
 | `/add-exports <path>` | Add import/export functionality |

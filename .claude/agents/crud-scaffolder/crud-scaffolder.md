@@ -176,5 +176,5 @@ After scaffolding, report:
 ## Reference
 
 - Use `/crm/contact` as the reference implementation
-- Follow patterns in `docs/PACKAGE_STANDARDS.md`
+- Follow patterns in `docs/standards/package_standards.md`
 - Ensure all contracts are created before implementations
