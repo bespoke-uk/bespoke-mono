@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "bespoke": {
+      "type": "stdio",
+      "command": "node",
+      "args": [".claude/mcp-server/dist/index.js"],
+      "env": {
+        "BESPOKE_ROOT": "/Users/stuart/Packages/bespoke"
+      }
+    }
+  }
+}

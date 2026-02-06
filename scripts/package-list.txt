@@ -1,0 +1,137 @@
+# Bespoke Package List - Generated 2026-01-14
+# Total: 100 packages
+# Excludes: workbench/*, vendor/*, node_modules/*
+#
+# Categories:
+#   api/        (7 packages)  - Third-party API integrations
+#   blade/      (34 packages) - Blade UI components
+#   cms/        (9 packages)  - Content management
+#   core/       (20 packages) - Core functionality
+#   crm/        (15 packages) - Customer relationship management
+#   custom/     (5 packages)  - Custom/client-specific
+#   default/    (9 packages)  - Default utilities
+#   ecommerce/  (1 package)   - E-commerce
+#   template/   (15 packages) - Templates
+
+# API Integrations
+/Users/stuart/Packages/bespoke/api/brevo
+/Users/stuart/Packages/bespoke/api/google-apis
+/Users/stuart/Packages/bespoke/api/harvest
+/Users/stuart/Packages/bespoke/api/hubspot
+/Users/stuart/Packages/bespoke/api/magento
+/Users/stuart/Packages/bespoke/api/microsoft
+/Users/stuart/Packages/bespoke/api/openai
+
+# Blade UI Components
+/Users/stuart/Packages/bespoke/blade/blade
+/Users/stuart/Packages/bespoke/blade/blade-accordion
+/Users/stuart/Packages/bespoke/blade/blade-account
+/Users/stuart/Packages/bespoke/blade/blade-admin
+/Users/stuart/Packages/bespoke/blade/blade-alert
+/Users/stuart/Packages/bespoke/blade/blade-aside
+/Users/stuart/Packages/bespoke/blade/blade-auth
+/Users/stuart/Packages/bespoke/blade/blade-auto-complete
+/Users/stuart/Packages/bespoke/blade/blade-badge
+/Users/stuart/Packages/bespoke/blade/blade-button
+/Users/stuart/Packages/bespoke/blade/blade-card
+/Users/stuart/Packages/bespoke/blade/blade-data-table
+/Users/stuart/Packages/bespoke/blade/blade-dropdown
+/Users/stuart/Packages/bespoke/blade/blade-error
+/Users/stuart/Packages/bespoke/blade/blade-feed
+/Users/stuart/Packages/bespoke/blade/blade-flag
+/Users/stuart/Packages/bespoke/blade/blade-form
+/Users/stuart/Packages/bespoke/blade/blade-frontend
+/Users/stuart/Packages/bespoke/blade/blade-grid
+/Users/stuart/Packages/bespoke/blade/blade-icon
+/Users/stuart/Packages/bespoke/blade/blade-link
+/Users/stuart/Packages/bespoke/blade/blade-list
+/Users/stuart/Packages/bespoke/blade/blade-loading
+/Users/stuart/Packages/bespoke/blade/blade-mail
+/Users/stuart/Packages/bespoke/blade/blade-map
+/Users/stuart/Packages/bespoke/blade/blade-meta
+/Users/stuart/Packages/bespoke/blade/blade-modal
+/Users/stuart/Packages/bespoke/blade/blade-pagination
+/Users/stuart/Packages/bespoke/blade/blade-pdf
+/Users/stuart/Packages/bespoke/blade/blade-progress
+/Users/stuart/Packages/bespoke/blade/blade-step
+/Users/stuart/Packages/bespoke/blade/blade-tab
+/Users/stuart/Packages/bespoke/blade/blade-table
+/Users/stuart/Packages/bespoke/blade/blade-widget
+
+# CMS
+/Users/stuart/Packages/bespoke/cms/cms
+/Users/stuart/Packages/bespoke/cms/enquiry
+/Users/stuart/Packages/bespoke/cms/menu
+/Users/stuart/Packages/bespoke/cms/menu-item
+/Users/stuart/Packages/bespoke/cms/page
+/Users/stuart/Packages/bespoke/cms/post
+/Users/stuart/Packages/bespoke/cms/post-category
+/Users/stuart/Packages/bespoke/cms/review
+/Users/stuart/Packages/bespoke/cms/social
+
+# Core
+/Users/stuart/Packages/bespoke/core/acl
+/Users/stuart/Packages/bespoke/core/activity
+/Users/stuart/Packages/bespoke/core/auth
+/Users/stuart/Packages/bespoke/core/backup
+/Users/stuart/Packages/bespoke/core/captcha
+/Users/stuart/Packages/bespoke/core/chart
+/Users/stuart/Packages/bespoke/core/core
+/Users/stuart/Packages/bespoke/core/dashboard
+/Users/stuart/Packages/bespoke/core/document
+/Users/stuart/Packages/bespoke/core/editor
+/Users/stuart/Packages/bespoke/core/employee
+/Users/stuart/Packages/bespoke/core/image
+/Users/stuart/Packages/bespoke/core/module
+/Users/stuart/Packages/bespoke/core/note
+/Users/stuart/Packages/bespoke/core/notification
+/Users/stuart/Packages/bespoke/core/profile
+/Users/stuart/Packages/bespoke/core/security
+/Users/stuart/Packages/bespoke/core/setting
+/Users/stuart/Packages/bespoke/core/two-factor
+/Users/stuart/Packages/bespoke/core/user
+
+# CRM
+/Users/stuart/Packages/bespoke/crm/address
+/Users/stuart/Packages/bespoke/crm/calendar
+/Users/stuart/Packages/bespoke/crm/calendar-event
+/Users/stuart/Packages/bespoke/crm/city
+/Users/stuart/Packages/bespoke/crm/contact
+/Users/stuart/Packages/bespoke/crm/county
+/Users/stuart/Packages/bespoke/crm/customer
+/Users/stuart/Packages/bespoke/crm/customer-package
+/Users/stuart/Packages/bespoke/crm/date
+/Users/stuart/Packages/bespoke/crm/email-template
+/Users/stuart/Packages/bespoke/crm/location
+/Users/stuart/Packages/bespoke/crm/project
+/Users/stuart/Packages/bespoke/crm/region
+/Users/stuart/Packages/bespoke/crm/supplier
+/Users/stuart/Packages/bespoke/crm/task
+
+# Custom
+/Users/stuart/Packages/bespoke/custom/area
+/Users/stuart/Packages/bespoke/custom/case-study
+/Users/stuart/Packages/bespoke/custom/case-study-category
+/Users/stuart/Packages/bespoke/custom/screenshot
+/Users/stuart/Packages/bespoke/custom/tests
+
+# Default
+/Users/stuart/Packages/bespoke/default/cloudflare
+/Users/stuart/Packages/bespoke/default/continent
+/Users/stuart/Packages/bespoke/default/cookie
+/Users/stuart/Packages/bespoke/default/country
+/Users/stuart/Packages/bespoke/default/default
+/Users/stuart/Packages/bespoke/default/pwa
+/Users/stuart/Packages/bespoke/default/redirect
+/Users/stuart/Packages/bespoke/default/referrer
+/Users/stuart/Packages/bespoke/default/seo
+
+# E-commerce
+/Users/stuart/Packages/bespoke/ecommerce/product
+
+# Template
+/Users/stuart/Packages/bespoke/template/package-tools
+/Users/stuart/Packages/bespoke/template/skeleton
+/Users/stuart/Packages/bespoke/template/skeleton-alias
+/Users/stuart/Packages/bespoke/template/skeleton-blade
+/Users/stuart/Packages/bespoke/template/skeleton-crud

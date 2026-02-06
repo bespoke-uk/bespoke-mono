@@ -1,0 +1,26 @@
+.idea
+.phpunit.cache
+.htpasswd
+.env
+.DS_Store
+.phpunit.result.cache
+.phpstorm.meta.php
+_ide_helper.php
+.git_history_report.txt
+npm-debug.log
+yarn-error.log
+/ai-context-logs
+
+.claude/mcp-server/node_modules
+
+# Ignore all the package specific files and folders
+/api
+/blade
+/cms
+/core
+/crm
+/custom
+/default
+/ecommerce
+/template
+/workbench

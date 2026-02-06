@@ -1,0 +1,44 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./.claude/hooks/session-context.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./.claude/hooks/format-php.sh"
+          },
+          {
+            "type": "command",
+            "command": "./.claude/hooks/ensure-claude-md.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./.claude/hooks/validate-package-edit.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "laravel-simplifier@laravel": true
+  }
+}
